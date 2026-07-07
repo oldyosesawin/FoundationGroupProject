@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float _speed;
     [SerializeField] private Rigidbody2D _rb;
     [SerializeField] private Vector2 _posLimit;
+    
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +30,8 @@ public class PlayerController : MonoBehaviour
             Mathf.Clamp(transform.position.y, -_posLimit.y, _posLimit.y));
 
     }
+
+    
     // Update is called once per frame
     void Update()
     {
