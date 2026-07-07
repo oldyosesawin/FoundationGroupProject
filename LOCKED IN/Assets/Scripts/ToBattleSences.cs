@@ -8,25 +8,30 @@ using UnityEngine.SceneManagement;
 public class ToBattleSences : MonoBehaviour
 {
     [SerializeField] private string battleScene;
+    [SerializeField] Animator transitionAnim;
     // Start is called before the first frame update
     void Start()
     {
         
     }
-
+   
    
 
     private void OnTriggerEnter2D(Collider2D player)
     {
         
-        if (player.gameObject.CompareTag("Player"))
+        if (player.CompareTag("Player"))
         {
             Debug.Log("Enter gate");
-            SceneManager.LoadScene(battleScene);
+            transitionAnim.SetTrigger("End");
+             SceneManager.LoadScene(battleScene);
+            transitionAnim.SetTrigger("Start");
+            
             
         }
     }
 
+   
 
     // Update is called once per frame
     void Update()
