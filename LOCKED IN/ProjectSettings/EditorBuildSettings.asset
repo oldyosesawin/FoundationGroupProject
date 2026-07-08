@@ -20,7 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Credit.unity
     guid: f4266e3326ac47e4abcdc1e86c24926c
-  - enabled: 1
-    path: Assets/Scenes/Setting.unity
+  - enabled: 0
+    path: Assets/Scenes/Testing Music code.unity
     guid: c897b569bccd5df44891722512cbff04
   m_configObjects: {}
