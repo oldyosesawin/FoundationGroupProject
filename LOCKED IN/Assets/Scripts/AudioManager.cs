@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
@@ -15,6 +16,25 @@ public class AudioManager : MonoBehaviour
     //public AudioClip Attack;
     //public AudioClip Gethit;
     //Add more i ran out of idea
+
+    public static AudioManager instance;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+            
+        }
+
+        else
+        {
+            Destroy(gameObject);
+        }
+
+
+    }
 
     private void Start()
     {
