@@ -29,4 +29,9 @@ public class MenuButtonController : MonoBehaviour
     {
         SceneManager.LoadSceneAsync(0);
     }
+
+    public void TotheEnd()
+    {
+        SceneManager.LoadSceneAsync("Ending");
+    }
 }
