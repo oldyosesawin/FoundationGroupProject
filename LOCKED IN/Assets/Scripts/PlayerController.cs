@@ -37,4 +37,11 @@ public class PlayerController : MonoBehaviour
     {
         CalculateMovement();
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Attack"))
+        {
+            PlayerHp.Instance.TakeDamage(4);
+        }
+    }
 }

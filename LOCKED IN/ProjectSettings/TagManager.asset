@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Gate
+  - Attack
   layers:
   - Default
   - TransparentFX
