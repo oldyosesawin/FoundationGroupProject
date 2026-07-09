@@ -33,5 +33,6 @@ public class MenuButtonController : MonoBehaviour
     public void TotheEnd()
     {
         SceneManager.LoadSceneAsync("Ending");
+        
     }
 }

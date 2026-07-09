@@ -973,7 +973,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 871805290}
         m_TargetAssemblyTypeName: MenuButtonController, Assembly-CSharp
-        m_MethodName: Credit
+        m_MethodName: TotheEnd
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
