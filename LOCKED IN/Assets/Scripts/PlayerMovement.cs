@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 moveInput;
     private Animator animator;
+    [SerializeField] private Vector2 _posLimit;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -35,6 +36,10 @@ public class PlayerMovement : MonoBehaviour
         moveInput = context.ReadValue<Vector2>();
         animator.SetFloat("InputX", moveInput.x);
         animator.SetFloat("InputY", moveInput.y);
+        transform.position = new Vector3(
+            Mathf.Clamp(transform.position.x, -_posLimit.x, _posLimit.x),
+            Mathf.Clamp(transform.position.y, -_posLimit.y, _posLimit.y));
+
     }
 }
 
