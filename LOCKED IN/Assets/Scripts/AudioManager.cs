@@ -36,6 +36,14 @@ public class AudioManager : MonoBehaviour
 
     }
 
+    private void Update()
+    {
+        if (SceneManager.GetActiveScene().name == "Ending")
+        {
+            Destroy(gameObject);
+        }
+    }
+
     private void Start()
     {
         musicSource.clip = background;
