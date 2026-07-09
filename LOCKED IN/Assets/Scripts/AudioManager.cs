@@ -7,14 +7,18 @@ public class AudioManager : MonoBehaviour
 {
     [Header("------- Audio Soure -------")]
     [SerializeField] AudioSource musicSource;
-    //[SerializeField] AudioSource SFXSource;
+    [SerializeField] AudioSource SFXSource;
 
 
     [Header("------- Audio Clip -------")]
     public AudioClip background;
-    //public AudioClip Hit;
-    //public AudioClip Attack;
-    //public AudioClip Gethit;
+    public AudioClip Hit;
+    public AudioClip AttackReyval;
+    public AudioClip AttackVodka;
+    public AudioClip Gunfire;
+    public AudioClip SwordSwing;
+    public AudioClip Beamshoot;
+    public AudioClip Gethit;
     //Add more i ran out of idea
 
     public static AudioManager instance;
