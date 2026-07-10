@@ -42,6 +42,7 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Attack"))
         {
             PlayerHp.Instance.TakeDamage(4);
+            Debug.Log("Hit");
         }
     }
 }
