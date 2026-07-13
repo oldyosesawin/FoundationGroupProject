@@ -483,6 +483,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1630873274}
+        m_TargetAssemblyTypeName: ChangeSceneWithDelay, Assembly-CSharp
+        m_MethodName: OnButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &153203902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2058,6 +2070,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1630873272}
   - component: {fileID: 1630873273}
+  - component: {fileID: 1630873274}
   m_Layer: 0
   m_Name: GameFlow
   m_TagString: Untagged
@@ -2100,6 +2113,20 @@ MonoBehaviour:
   anim: {fileID: 930531184}
   Dialogue: {fileID: 1939339554}
   DialogueBox: {fileID: 281439454}
+--- !u!114 &1630873274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1630873270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72c1cd57de6bd604c8af32100cd64d2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetSceneName: Battle 2
+  delayInSeconds: 6
 --- !u!1 &1737098517
 GameObject:
   m_ObjectHideFlags: 0
