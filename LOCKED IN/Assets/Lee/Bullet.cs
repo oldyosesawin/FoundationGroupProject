@@ -26,6 +26,8 @@ public class Bullet : MonoBehaviour
     }
     public void StartMoving(Vector2 direction)
     {
+        float rot = Mathf.Atan2 (-direction.y, -direction.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(0, 0, rot);
         _rb.velocity = _speed * direction.normalized;
     }
 

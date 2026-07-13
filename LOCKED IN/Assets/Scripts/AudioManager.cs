@@ -12,13 +12,13 @@ public class AudioManager : MonoBehaviour
 
     [Header("------- Audio Clip -------")]
     public AudioClip background;
-    public AudioClip Hit;
-    public AudioClip AttackReyval;
-    public AudioClip AttackVodka;
+    public AudioClip Attack;
+    public AudioClip CarrotSummon;
+    public AudioClip Sucking;
     public AudioClip Gunfire;
     public AudioClip SwordSwing;
     public AudioClip Beamshoot;
-    public AudioClip Gethit;
+    public AudioClip TakeDamaged;
     //Add more i ran out of idea
 
     public static AudioManager instance;
@@ -52,5 +52,10 @@ public class AudioManager : MonoBehaviour
     {
         musicSource.clip = background;
         musicSource.Play();
+    }
+
+    public void PlaySFX(AudioClip clip)
+    {
+        SFXSource.PlayOneShot(clip);
     }
 }

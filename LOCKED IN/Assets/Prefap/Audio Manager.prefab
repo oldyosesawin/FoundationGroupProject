@@ -169,7 +169,7 @@ AudioSource:
   m_GameObject: {fileID: 5295546059878499162}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -5945794431499262406, guid: 2558c72c0f7a3ef4493638cacdf3b965, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -268,7 +268,7 @@ GameObject:
   - component: {fileID: 8042867010425275496}
   m_Layer: 0
   m_Name: Audio Manager
-  m_TagString: Untagged
+  m_TagString: Audio
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -305,10 +305,10 @@ MonoBehaviour:
   musicSource: {fileID: 9160575062653607197}
   SFXSource: {fileID: 2790623054927853260}
   background: {fileID: 8300000, guid: 7152939cca89a464c8b5751e3e215697, type: 3}
-  Hit: {fileID: 0}
-  AttackReyval: {fileID: 0}
-  AttackVodka: {fileID: 0}
-  Gunfire: {fileID: 0}
+  Attack: {fileID: 8300000, guid: bd4b36e715585674c812106e48f97ac8, type: 3}
+  CarrotSummon: {fileID: 0}
+  Sucking: {fileID: 0}
+  Gunfire: {fileID: 8300000, guid: abe4f3bec2ad8a94f9f79f756d68ec21, type: 3}
   SwordSwing: {fileID: 0}
-  Beamshoot: {fileID: 0}
-  Gethit: {fileID: 0}
+  Beamshoot: {fileID: 8300000, guid: b22994e2f3bea6d40b4b323c04e2157c, type: 3}
+  TakeDamaged: {fileID: 8300000, guid: 85416d4391d07d64188e51a8da964357, type: 3}

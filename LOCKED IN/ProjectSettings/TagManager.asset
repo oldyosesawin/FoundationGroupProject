@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Gate
   - Attack
+  - Audio
   layers:
   - Default
   - TransparentFX

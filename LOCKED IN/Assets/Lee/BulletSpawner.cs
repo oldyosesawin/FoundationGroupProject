@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+
 
 public class BulletSpawner : MonoBehaviour
 {
@@ -13,25 +15,26 @@ public class BulletSpawner : MonoBehaviour
     [SerializeField] private float _spawnHorizontalRange = 8f;
 
     [SerializeField] private GameObject _player;
-
+    AudioManager audioManager;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void Awake()
     {
-
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            SpawnMeteor();
-        }
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    SpawnMeteor();
+        //}
     }
 
     void SpawnMeteor()
     {
+        audioManager.PlaySFX(audioManager.Gunfire);
         Bullet spawnedMeteor = Instantiate(_meteorPrefab, GetRandomSpawnPosition(), Quaternion.identity);
         spawnedMeteor.StartMoving(_player.transform.position - spawnedMeteor.transform.position);
     }

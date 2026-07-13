@@ -6,9 +6,16 @@ public class ChangeSceneWithDelay : MonoBehaviour
 {
     [SerializeField] private string targetSceneName;
     [SerializeField] private float delayInSeconds = 2.0f;
+    //AudioManager audioManager;
     // Start is called before the first frame update
+
+    //private void Awake()
+    //{
+    //    audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    //}
     public void OnButtonClick()
     {
+        //audioManager.PlaySFX(audioManager.Attack);
         StartCoroutine(WaitAndChangeScene());
     }
 
