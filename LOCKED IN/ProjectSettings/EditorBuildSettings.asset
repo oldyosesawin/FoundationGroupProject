@@ -15,6 +15,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Battle.unity
     guid: 7b043a4b02649c04b80fec101483c5e0
   - enabled: 1
+    path: Assets/Scenes/Battle 1.unity
+    guid: 2ae63928174dd0e49acffb391cd0ed9d
+  - enabled: 1
+    path: Assets/Scenes/Battle 2.unity
+    guid: 85a2f2457d3191748ba2d564f9db0cf7
+  - enabled: 1
+    path: Assets/Scenes/Battle 3.unity
+    guid: 2b47644d1c6a3b2459907cf8b776365f
+  - enabled: 1
     path: Assets/Scenes/Ending.unity
     guid: 1afc112c5589e424e84243506099d4d2
   - enabled: 1
