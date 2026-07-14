@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHp : MonoBehaviour
 {
     [SerializeField] private GameoverRestartController _gamecontroller;
     public static PlayerHp Instance;
     AudioManager audioManager;
+    float playerhp = 20;
 
 
 
@@ -24,7 +26,7 @@ public class PlayerHp : MonoBehaviour
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
 
-    float playerhp = 20;
+    
 
     public float CurrentPlayerHP => playerhp;
 
@@ -42,6 +44,12 @@ public class PlayerHp : MonoBehaviour
         if (playerhp == 0)
         {
             _gamecontroller.GameOver();
+            playerhp = 20;
+        }
+
+        if (SceneManager.GetActiveScene().name == "Ending")
+        {
+            Destroy(gameObject);
         }
     }
 

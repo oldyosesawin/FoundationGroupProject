@@ -2855,7 +2855,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d30dbcfa49059f4f9f1d2797dda9ecc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gameOverScreen: {fileID: 1632453766}
+  _gameOverScreen: {fileID: 819788674}
+  playerhp: {fileID: 2092448620}
 --- !u!4 &1851061933
 Transform:
   m_ObjectHideFlags: 0

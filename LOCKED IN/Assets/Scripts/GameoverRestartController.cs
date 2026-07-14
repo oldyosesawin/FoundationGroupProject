@@ -40,6 +40,11 @@ public class GameoverRestartController : MonoBehaviour
             Time.timeScale = 1f;
             SceneManager.LoadScene(0);
         }
+
+        if (SceneManager.GetActiveScene().name == "Ending")
+        {
+            Destroy(gameObject);
+        }
     }
     public void GameOver()
     {
