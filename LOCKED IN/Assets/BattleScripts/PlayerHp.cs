@@ -35,19 +35,20 @@ public class PlayerHp : MonoBehaviour
         playerhp -= dmgVal;
     }
 
-    public void OutofHP()
+
+
+    private void Update()
     {
-        if (playerhp <= 0)
+        if (playerhp == 0)
         {
             _gamecontroller.GameOver();
         }
     }
 
-    private void Update()
+    public void HPReset()
     {
-      
-    }
 
+    }
 
 
 

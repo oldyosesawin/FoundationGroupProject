@@ -6,19 +6,34 @@ using UnityEngine.SceneManagement;
 public class GameoverRestartController : MonoBehaviour
 {
     [SerializeField] private GameObject _gameOverScreen;
+    [SerializeField] private PlayerHp playerhp;
+    public static GameoverRestartController Instance;
 
     private bool _isPlaying = true;
     public bool IsPlaying => _isPlaying;
 
 
+    private void Awake()
+    {
+        if (Instance != null)
+            Destroy(this.gameObject);
+        else
+        {
+            transform.SetParent(null);
+            DontDestroyOnLoad(this.gameObject);
+            Instance = this;
 
+        }
+        
+    }
 
     private void Update()
     {
         if (!_isPlaying && Input.GetKeyDown(KeyCode.R))
         {
-            SceneManager.LoadScene(2);
+            
             Restart();
+            
         }
         else if (!_isPlaying && Input.GetKeyDown(KeyCode.Escape))
         {
@@ -35,7 +50,11 @@ public class GameoverRestartController : MonoBehaviour
 
     private void Restart()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1f;
+        _gameOverScreen.SetActive(false);
+        SceneManager.LoadScene(2);
+        
     }
+
+
 }
