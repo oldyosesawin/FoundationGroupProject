@@ -22,11 +22,18 @@ public class BeamSpawnerController : MonoBehaviour
 
     
     [SerializeField] private float fireRate = 0.5f;
+    AudioManager audioManager;
+
 
     private bool isAutoFiring = false;
     private Coroutine autoFireCoroutine;
 
-   
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
+
     public void OnButtonClick()
     {
         
@@ -69,6 +76,7 @@ public class BeamSpawnerController : MonoBehaviour
        
         while (isAutoFiring)
         {
+            audioManager.PlaySFX(audioManager.Beamshoot);
             ShootOnePrefab();
             yield return new WaitForSeconds(fireRate);
         }
