@@ -46,6 +46,14 @@ public class AudioManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        else if (SceneManager.GetActiveScene().name == "MainMenu")
+        {
+            Destroy(gameObject);
+        }
+        else if (SceneManager.GetActiveScene().name == "Credit")
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void Start()
