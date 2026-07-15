@@ -51,6 +51,14 @@ public class PlayerHp : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        else if (SceneManager.GetActiveScene().name == "MainMenu")
+        {
+            Destroy(gameObject);
+        }
+        else if (SceneManager.GetActiveScene().name == "Credit")
+        {
+            Destroy(gameObject);
+        }
     }
 
     public void HPReset()
