@@ -4,25 +4,48 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class ChangeSceneWithDelay : MonoBehaviour
 {
-    [SerializeField] private string targetSceneName;
-    [SerializeField] private float delayInSeconds = 2.0f;
-    //AudioManager audioManager;
-    // Start is called before the first frame update
 
-    //private void Awake()
-    //{
-    //    audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
-    //}
+   
+    [SerializeField] private string targetSceneName;
+
+    
+    [SerializeField] private float startDelay = 2.0f;
+
+    
+    [SerializeField] private float transitionDuration = 1.0f;
+
+   
+    [SerializeField] private Animator fadeAnimator;
+
+   
+    [SerializeField] private string fadeTriggerName = "StartFade";
+
+    private bool isTransitioning = false;
+
     public void OnButtonClick()
     {
-        //audioManager.PlaySFX(audioManager.Attack);
-        StartCoroutine(WaitAndChangeScene());
+        
+        if (!isTransitioning)
+        {
+            StartCoroutine(WaitAndChangeScene());
+        }
     }
 
     private IEnumerator WaitAndChangeScene()
     {
+        isTransitioning = true;
+
         
-        yield return new WaitForSeconds(delayInSeconds);
+        yield return new WaitForSeconds(startDelay);
+
+        
+        if (fadeAnimator != null)
+        {
+            fadeAnimator.SetTrigger(fadeTriggerName);
+        }
+
+        
+        yield return new WaitForSeconds(transitionDuration);
 
         
         if (!string.IsNullOrEmpty(targetSceneName))
@@ -32,6 +55,7 @@ public class ChangeSceneWithDelay : MonoBehaviour
         else
         {
             Debug.LogError("ยังไม่ได้ใส่ชื่อ Scene ในช่อง Target Scene Name!");
+            isTransitioning = false;
         }
     }
 }
