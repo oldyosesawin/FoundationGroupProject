@@ -307,7 +307,7 @@ MonoBehaviour:
   background: {fileID: 8300000, guid: 7152939cca89a464c8b5751e3e215697, type: 3}
   Attack: {fileID: 8300000, guid: bd4b36e715585674c812106e48f97ac8, type: 3}
   CarrotSummon: {fileID: 0}
-  Sucking: {fileID: 0}
+  Sucking: {fileID: 8300000, guid: 0011c701984bfa54bb4b41a38c29058b, type: 3}
   Gunfire: {fileID: 8300000, guid: abe4f3bec2ad8a94f9f79f756d68ec21, type: 3}
   SwordSwing: {fileID: 8300000, guid: c2a9b7e89193c8b4d8550a2e97407d42, type: 3}
   Beamshoot: {fileID: 8300000, guid: b22994e2f3bea6d40b4b323c04e2157c, type: 3}
