@@ -17,7 +17,7 @@ public class MenuButtonController : MonoBehaviour
 
     public void Credit()
     {
-        SceneManager.LoadSceneAsync(4);
+        SceneManager.LoadSceneAsync("Credit");
     }
 
     public void LeaveGame()
