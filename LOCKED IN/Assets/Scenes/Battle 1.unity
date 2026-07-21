@@ -840,6 +840,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Audio Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 8042867010425275496, guid: 6aff77737cacee84394abed62d2126a6, type: 3}
+      propertyPath: Sucking
+      value: 
+      objectReference: {fileID: 8300000, guid: 0011c701984bfa54bb4b41a38c29058b, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

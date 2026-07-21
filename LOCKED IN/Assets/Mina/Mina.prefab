@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 345859985367477539}
-  projectilePrefab: {fileID: 7885158400540746081, guid: 035ff3ff91d98b6429447a201fe3ca80, type: 3}
+  projectilePrefab: {fileID: 5005144591669681992, guid: eb17c4a8f1cacce4f85d23dc6a05793a, type: 3}
   targetPoints:
   - {fileID: 0}
   - {fileID: 0}

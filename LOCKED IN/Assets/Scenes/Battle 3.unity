@@ -2507,7 +2507,7 @@ PrefabInstance:
     - target: {fileID: 9083051224868145532, guid: 1d51193b23fe0b14392f2cdf4ac121ca, type: 3}
       propertyPath: projectilePrefab
       value: 
-      objectReference: {fileID: 4541853634947406972, guid: 28970ac07088afa46b2db8a736c4c987, type: 3}
+      objectReference: {fileID: 5005144591669681992, guid: eb17c4a8f1cacce4f85d23dc6a05793a, type: 3}
     - target: {fileID: 9083051224868145532, guid: 1d51193b23fe0b14392f2cdf4ac121ca, type: 3}
       propertyPath: targetPoints.Array.data[0]
       value: 

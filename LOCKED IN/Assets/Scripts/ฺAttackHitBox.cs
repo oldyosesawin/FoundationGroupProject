@@ -5,10 +5,15 @@ using UnityEngine.InputSystem.LowLevel;
 
 public class AttackHitBox : MonoBehaviour
 {
-     
+    AudioManager audioManager;
 
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
     Collider2D Hitbox;
     // Start is called before the first frame update
+
     void Start()
     {
         Hitbox = GetComponent<Collider2D>();
@@ -18,6 +23,7 @@ public class AttackHitBox : MonoBehaviour
     public void OpenHitBox()
     {
         Hitbox.enabled = true;
+        audioManager.PlaySFX(audioManager.SwordSwing);
     }
    
     

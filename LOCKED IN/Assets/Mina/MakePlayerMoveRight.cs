@@ -12,10 +12,14 @@ public class MakePlayerMoveRight : MonoBehaviour
 
    
     [SerializeField] private float delayTime = 2.0f;
-
+    AudioManager audioManager;
     private bool isMoving = false;
 
-    
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
     public void OnButtonClick()
     {
         
@@ -32,6 +36,7 @@ public class MakePlayerMoveRight : MonoBehaviour
 
        
         isMoving = true;
+        audioManager.PlaySFX(audioManager.Sucking);
     }
 
     private void Update()
