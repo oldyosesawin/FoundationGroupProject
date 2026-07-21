@@ -304,7 +304,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSource: {fileID: 9160575062653607197}
   SFXSource: {fileID: 2790623054927853260}
-  background: {fileID: 8300000, guid: 40b2227246a7f33469d21a274aff18a3, type: 3}
+  background: {fileID: 8300000, guid: a4b8db4e51b5bc64797defacebf70291, type: 3}
   Attack: {fileID: 8300000, guid: bd4b36e715585674c812106e48f97ac8, type: 3}
   CarrotSummon: {fileID: 0}
   Sucking: {fileID: 8300000, guid: 0011c701984bfa54bb4b41a38c29058b, type: 3}
